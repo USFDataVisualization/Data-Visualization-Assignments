@@ -1,0 +1,236 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{my_pkg}
+\usepackage{my_pkg2}
+
+\title{Project 8: Force Directed Graph Layout}
+\SetDocumentFooter{}{}
+
+\begin{document}
+
+\maketitle
+
+\section{Objectives}
+
+\myparagraph{In this assignment you look to address scalability concerns with your previous sketches by using aggregation techniques. Again, take care to use good software engineering practices. }
+
+\section{Ground Rules}
+
+\groundrules
+
+
+
+\section{Assignment Instructions}
+
+\begin{itemize}
+
+\item Download the skeleton code and data provided in Canvas$\rightarrow$Files. This dataset contains character coappearence in Victor Hugo's Les Misérables, compiled by Donald Knuth. 
+
+\item Fill in the portion of the code for loading the data, noting that it is in JSON format. JSON is a more flexible storage format than CSV, but it is also more complicated to parse and load. Please see Processing reference on parsing JSON Objects\footnote{\url{https://processing.org/reference/parseJSONObject_.html}} and JSON Arrays\footnote{\url{https://processing.org/reference/parseJSONArray_.html}}.
+
+\item Using the data, fill in the code sections for creating a force-directed graph layout\footnote{See section 12.2 of \url{https://cs.brown.edu/~rt/gdhandbook/chapters/force-directed.pdf} and the extra powerpoint slides provided on canvas}. You will only need to calculate forces, draw the graph, and code interactions.
+
+\item (50\% extra credit) Create a distance matrix for the points using Shortest Path Distance\footnote{\url{https://en.wikipedia.org/wiki/Dijkstra's_algorithm}}. Now draw the graph by projecting the points using Multidimensional Scaling (MDS)\footnote{You can use the MDSJ library for this, \url{http://algo.uni-konstanz.de/software/mdsj/}}.
+
+\item Add any additional linking or interactions that you think will make your dashboard more useful. Your selection and their implementation will have an impact on your grade.
+
+\item Modify your sketches such that they use additional visual channels to encoding additional variables. Consider using color, size, shape, depth, etc. Your selection and their implementation will have an impact on your grade.
+
+\item Add embellishments of your choice. These can include but are not limited to: axis lines, labels, and tick marks. Your selection and their implementation will have an impact on your grade.
+
+\item Make sure your visualizations are robust by designing them to support other data (number of elements or value range) and by designing them to support any size of canvas.
+
+\end{itemize}
+
+
+\section{Submission}
+
+\submission{project8}
+
+\section{Grading and Feedback}
+
+\feedback
+
+
+
+
+
+
+\newpage
+
+
+\begin{center}
+{\huge Project 8 Peer Review}
+\end{center}
+
+
+
+
+
+\StartTable{Algorithmic Design}
+
+\AddElement{Correct Implementation}
+	{Does the algorithm appear to produce the correct result, given your knowledge of the 
+    	data?}
+    {\choice No}
+    {\choice Minor\\Errors}
+    {\choice Appears\\Correct}
+    
+\AddElement{Efficient Implementation}
+	{Is the performance (speed) of the algorithm what you expected? Is 
+    	it slower? Is it faster?}
+    {\choice Much\\Slower}
+    {\choice As Expected}
+    {\choice Much\\Faster}
+    
+\AddElement{Featureful Implementation}
+	{Does the implementation contain the basic required 
+    	features or are additional features included?}
+    {\choice Major Features Missing}
+    {\choice As Expected}
+    {\choice Major Features Added} 
+    
+\EndTable
+
+
+\vspace{15pt}
+
+
+\StartTable{Visual Design}
+
+\AddMultipleChoiceElement{Visual Channels}
+	{What visual channels were used to encode data? }
+    { 
+     \AddMCColumn{1.65cm}{\choice Position	\\ \choice Depth	\\ \choice Angle}
+     \AddMCColumn{1.95cm}{\choice Curvature	\\ \choice Shape	\\ \choice Length}
+     \AddMCColumn{2.3cm}{\choice Area		\\ \choice Volume  	\\ \choice Luminance/\\\ \ Saturation}
+     \AddMCColumn{1.95cm}{\choice Color Hue	\\ \choice Texture	\\ \choice Motion/\\\ \ Animation}
+    }
+        
+\AddElement{Intended/Unintended Encodings}
+	{Do all of the visual encoding appear to be intended, or were some accidentally created?}
+        {\choice Many\\Unintended}
+        {\choice Few\\Unintended}
+        {\choice All\\Intended} 
+        
+\AddElementExtended{Expressiveness of Encodings}
+	{Are the visual encodings attached to the correct type of data for that 
+    	encoding (i.e.\ are quantitative data attached to quantitative 
+        encodings and categorical data to categorical encodings)?}
+    {\choice Many\\Errors}
+    {\choice Few\\Errors}
+    {\choice Correctly\\Assigned} 
+            
+\AddElement{Effectiveness of Encodings}
+	{Have the maximally effective visual encodings been selected in all cases? }
+    {\choice Many\\Ineffective}
+    {\choice Few\\Ineffective}
+    {\choice Most\\Effective} 
+        
+\AddElement{Effective Use of Color}
+	{Is color used in a same fashion? Do the colors chosen and the application 
+    	of those colors make the visualization effective?}
+    {\choice Mostly\\Ineffective}
+    {\choice None\\Used}
+    {\choice Highly\\Effective} 
+
+\EndTable  
+
+\vspace{15pt}
+
+\StartTable{Design Considerations}
+
+\AddElement{Clear, Detailed, and Thorough Labeling}
+   	{Is appropriate and complete labeling used throughout or do 
+      	missing labels require assumptions about the data?}
+    {\choice No labels}
+    {\choice Some Missing labels}
+    {\choice Completely labeled} 
+        
+\AddElement{Missing Scales}
+   	{Are scales provided for the data?}
+	{\choice No Scales}
+	{\choice Some Missing Scales}
+	{\choice All Scales Present} 
+
+\AddElement{Missing Legend}
+	{Is a legend provided for the data? Does the legend provide useful 
+    	information?}
+	{\choice No Legend}
+	{\choice Incomplete Legend}
+	{\choice Complete Legend} 
+        
+        
+
+\AddElement{Scale Distortion}
+	{Is any scale distortion or deception used in the visualization?}	
+	{\choice Severe Distortion}
+	{\choice Minor Distortion}
+	{\choice No Distortion} 
+        
+\AddElement{Lie Factor}
+	{Is there any lie factor? How extreme is the lie factor?}
+	{\choice Major Lie}
+	{\choice Minor Lie}
+	{\choice No Lie} 
+
+\AddElement{Data/Ink Ratio}
+	{Is the data to ink ratio reasonable? Could it be more efficient?}
+	{Way Too $\square$~Little / $\square$~Much Ink}
+	{Slightly Too $\square$~Little / $\square$~Much Ink}
+	{\choice Perfect Amount of Ink} 
+        
+\AddElement{Junk, Embellishments, Aesthetics}
+	{Are appropriate embellishments used? Are the embellishments 
+    	distracting? Do the embellishments add to the visualization?}
+	{Way Too $\square$~Few / $\square$~Many Embellishments}
+	{A Bit Too $\square$~Few / $\square$~Many Embellishments}
+	{\choice Perfect Number of Embellishments} 
+        
+\AddElement{Data Density}
+	{Has too much data been included in the visualization making 
+    	interpretation difficult? } 
+	{\choice Too Sparse}
+	{\choice Expected}
+	{\choice Too Dense} 
+        
+\AddElement{Gestalt Principals}
+	{Have Gestalt principals been used to improve analysis?}
+	{\choice No Gestalt Principals}
+	{\choice Some Gestalt Principals}
+	{\choice Many Gestalt Principals} 
+        
+\EndTable  
+ 
+
+
+
+\newpage
+
+
+\begin{center}
+{\huge Project 8 Grading}
+\end{center}
+
+\begin{itemize}
+	\item Force directed layout - 7 points
+	\item MDS layout - 5 points
+	\item Additional interaction, embellishment, and additional Visual Channels - 1.5 points 
+		\begin{itemize}
+    		\item 0.5 points for none used
+    		\item 1.0 point for a few
+            \item 1.5 points for many
+		\end{itemize}
+	\item Code Professionalism - 1.5 points
+		\begin{itemize}
+            \item 0.5 no comments, no classes, "hard coded" values
+            \item 1.0 minimally commented, few "hard coded" values
+            \item 1.5 commented, used classes, few "hard coded" values
+		\end{itemize}
+\end{itemize}
+
+
+
+\end{document}
+
+

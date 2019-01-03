@@ -1,0 +1,223 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{my_pkg}
+\usepackage{my_pkg2}
+
+\title{Project 2: Drawing Basic Charts in Processing\\
+\vspace{5pt}\normalsize (Adapted from an assignment created by Carlos Scheidegger)}
+\SetDocumentFooter{}{}
+
+\begin{document}
+
+\maketitle
+
+\section{Objectives}
+
+\myparagraph{In this assignment you will learn the basics of Processing, and create a few Processing sketches that implement basic visualizations. These will be building blocks for future assignments, so take care to use good software engineering practices. You will create 3 sketches.}
+
+\section{Ground Rules}
+
+\groundrules
+
+
+\section{Assignment Instructions}
+
+\begin{itemize}
+
+\item Download and familiarize yourself with Processing (\url{http://processing.org/download/}). Use the available tutorials (\url{http://processing.org/tutorials/}) and examples (\url{http://processing.org/examples/}) to help you understand how Processing works.
+
+\item Create a data file. Your data file should be a csv format file (\url{http://www.computerhope.com/issues/ch001356.htm}). The file should contain the following headers \{YEAR, VALUE0, VALUE1, PARTY\} and values $\Big[$\{1992, 7.30, 88, DEM\}, \{1996, 5.60, 43, DEM\}, \{2000, 4.00, 76, REP\}, \{2004, 5.70, 90, REP\}, \{2008, 5.00, 12, DEM\}, \{2012, 8.30, 14, DEM\}, \{2016, 4.90, 50, REP\}$\Big]$.
+
+\item Create a sketch with 600x600 resolution that opens a file dialog box (\url{http://processing.org/reference/selectInput_.html}) and loads a selected csv data file. You can start with the skeleton code provided on Canvas.
+
+\item With the given data file, draw a BAR CHART for the data (you get to pick which variables to use).
+
+\begin{center}
+\includegraphics[width=4cm, height=3cm]{images/barchart.png}
+\end{center}
+
+\item Create a 2nd sketch (same resolution and dialog box), and draw a LINE CHART for the data (again you get to pick which variables to use).
+
+
+\begin{center}
+\includegraphics[width=4cm]{images/linechart.png}
+\end{center}
+
+\item Create a 3rd sketch (same resolution and dialog box), and draw a LINE CHART on top of a BAR CHART with the data.
+
+\begin{center}
+\includegraphics[width=4cm]{images/bar_and_line_chart.png}
+\end{center}
+
+
+\item Modify your sketches such that they use additional visual channels to encode additional variables. Consider using color, size, shape, depth, etc. Your selection and their implementation will have an impact on your grade.
+
+\item Add embellishments of your choice. These can include but are not limited to: axis lines, labels, and tick marks. Consider the margins for your embellishments (try to pick good values for the tick marks and a good number of them---not too many and not too few). Your selection and their implementation will have an impact on your grade.
+
+\item Make your visualizations robust by designing them to support any data (number of elements or value range) and by designing them to support any size or aspect ratio of canvas.
+
+\end{itemize}
+
+
+\section{Submission}
+
+\submission{project2}
+
+\section{Grading and Feedback}
+
+\feedback
+
+
+
+
+\newpage
+
+
+\begin{center}
+{\huge Project 2 Peer Review}
+\end{center}
+
+
+
+
+\StartTable{Visual Design}
+
+\AddMultipleChoiceElement{Visual Channels}
+	{What visual channels were used to encode data? }
+    { 
+     \AddMCColumn{1.65cm}{\choice Position	\\ \choice Depth	\\ \choice Angle}
+     \AddMCColumn{1.95cm}{\choice Curvature	\\ \choice Shape	\\ \choice Length}
+     \AddMCColumn{2.3cm}{\choice Area		\\ \choice Volume  	\\ \choice Luminance/\\\ \ Saturation}
+     \AddMCColumn{1.95cm}{\choice Color Hue	\\ \choice Texture	\\ \choice Motion/\\\ \ Animation}
+    }
+        
+\AddElement{Intended/Unintended Encodings}
+	{Do all of the visual encoding appear to be intended, or were some accidentally created?}
+        {\choice Many\\Unintended}
+        {\choice Few\\Unintended}
+        {\choice All\\Intended} 
+        
+\AddElementExtended{Expressiveness of Encodings}
+	{Are the visual encodings attached to the correct type of data for that 
+    	encoding (i.e.\ are quantitative data attached to quantitative 
+        encodings and categorical data to categorical encodings)?}
+    {\choice Many\\Errors}
+    {\choice Few\\Errors}
+    {\choice Correctly\\Assigned} 
+            
+\AddElement{Effectiveness of Encodings}
+	{Have the maximally effective visual encodings been selected in all cases? }
+    {\choice Many\\Ineffective}
+    {\choice Few\\Ineffective}
+    {\choice Most\\Effective} 
+        
+\AddElement{Effective Use of Color}
+	{Is color used in a same fashion? Do the colors chosen and the application 
+    	of those colors make the visualization effective?}
+    {\choice Mostly\\Ineffective}
+    {\choice None\\Used}
+    {\choice Highly\\Effective} 
+
+\EndTable  
+
+\vspace{15pt}
+
+\StartTable{Design Considerations}
+
+\AddElement{Clear, Detailed, and Thorough Labeling}
+   	{Is appropriate and complete labeling used throughout or do 
+      	missing labels require assumptions about the data?}
+    {\choice No labels}
+    {\choice Some Missing labels}
+    {\choice Completely labeled} 
+        
+\AddElement{Missing Scales}
+   	{Are scales provided for the data?}
+	{\choice No Scales}
+	{\choice Some Missing Scales}
+	{\choice All Scales Present} 
+
+\AddElement{Missing Legend}
+	{Is a legend provided for the data? Does the legend provide useful 
+    	information?}
+	{\choice No Legend}
+	{\choice Incomplete Legend}
+	{\choice Complete Legend} 
+        
+        
+\EndTable  
+
+
+\StartTable{Design Considerations (cont.)}
+
+\AddElement{Scale Distortion}
+	{Is any scale distortion or deception used in the visualization?}	
+	{\choice Severe Distortion}
+	{\choice Minor Distortion}
+	{\choice No Distortion} 
+        
+\AddElement{Lie Factor}
+	{Is there any lie factor? How extreme is the lie factor?}
+	{\choice Major Lie}
+	{\choice Minor Lie}
+	{\choice No Lie} 
+
+\AddElement{Data/Ink Ratio}
+	{Is the data to ink ratio reasonable? Could it be more efficient?}
+	{Way Too $\square$~Little / $\square$~Much Ink}
+	{Slightly Too $\square$~Little / $\square$~Much Ink}
+	{\choice Perfect Amount of Ink} 
+        
+\AddElement{Chart Junk, Embellishments, Aesthetics}
+	{Are appropriate embellishments used? Are the embellishments 
+    	distracting? Do the embellishments add to the visualization?}
+	{Way Too $\square$~Few / $\square$~Many Embellishments}
+	{A Bit Too $\square$~Few / $\square$~Many Embellishments}
+	{\choice Perfect Number of Embellishments} 
+        
+\AddElement{Data Density}
+	{Has too much data been included in the visualization making 
+    	interpretation difficult? } 
+	{\choice Too Sparse}
+	{\choice Expected}
+	{\choice Too Dense} 
+        
+\EndTable  
+        
+
+
+\newpage
+
+
+\begin{center}
+{\huge Project 2 Grading}
+\end{center}
+
+\begin{itemize}
+	\item 3 Visualizations - 6 points (basic implementation 2 points each)
+	\item Additional Visual Channels - 1.5 points 
+		\begin{itemize}
+    		\item 0.5 points for none used
+    		\item 1.0 point for a few
+            \item 1.5 points for many
+		\end{itemize}
+	\item Embellishment - 1.5 points 
+		\begin{itemize}
+    		\item 0.5 points for none used
+    		\item 1.0 point for some
+            \item 1.5 points for a lot
+		\end{itemize}
+	\item Code Professionalism - 1 points
+		\begin{itemize}
+            \item 0.5 no comments, no classes, "hard coded" values
+            \item 0.75 minimally commented, few "hard coded" values
+            \item 1.0 commented, used classes, few "hard coded" values
+		\end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
+
+

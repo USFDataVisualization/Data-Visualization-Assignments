@@ -1,0 +1,107 @@
+
+
+
+
+\newcommand{\choice}[1]{$\square$ #1}
+
+\newcommand{\StartTable}[1]{
+	\def\arraystretch{1.15}
+    %\setlength\extrarowheight{2pt}
+    %\begin{table*}[!ht]
+    \begin{tabular}{ | l m{6.3cm}|m{2.55cm}|m{0.2cm}|m{2.55cm}|m{0.2cm}|m{2.55cm}| }
+     	\hline
+	    \multicolumn{7}{|l|}{\textbf{#1}} \\
+		\hline
+}
+
+\newcommand{\AddElement}[5]{
+	& 	\multirow{3}{1.0\linewidth}{\small\underline{#1} --- #2}
+    &	\parbox[t]{1.0\linewidth}{\small\centering #3\vspace{2pt}} 
+    &	\parbox[t]{1.0\linewidth}{\small\centering$\square$}
+    &	\parbox[t]{1.0\linewidth}{\small\centering #4\vspace{2pt}} 
+    &	\parbox[t]{1.0\linewidth}{\small\centering$\square$}
+    &	\parbox[t]{1.0\linewidth}{\small\centering #5\vspace{2pt}}
+    \\
+    \cline{3-7}
+     & & \multicolumn{5}{l|}{\small Comments:} \\
+%     & & \multicolumn{5}{l|}{ } \\
+     & & \multicolumn{5}{l|}{ } \\
+	\hline
+}
+
+\newcommand{\AddElementExtended}[5]{
+	& 	\multirow{5}{1.0\linewidth}{\small\underline{#1} --- #2}
+    &	\parbox[t]{1.0\linewidth}{\small\centering #3\vspace{2pt}} 
+    &	\parbox[t]{1.0\linewidth}{\small\centering$\square$}
+    &	\parbox[t]{1.0\linewidth}{\small\centering #4\vspace{2pt}} 
+    &	\parbox[t]{1.0\linewidth}{\small\centering$\square$}
+    &	\parbox[t]{1.0\linewidth}{\small\centering #5\vspace{2pt}}
+    \\
+    \cline{3-7}
+     & & \multicolumn{5}{l|}{\small Comments:} \\
+     & & \multicolumn{5}{l|}{ } \\
+     & & \multicolumn{5}{l|}{ } \\
+     & & \multicolumn{5}{l|}{ } \\
+	\hline
+}
+
+
+\newcommand{\AddMultipleChoiceElement}[3]{
+	& 	\multirow{3}{1.0\linewidth}{\small\underline{#1} --- #2}
+	& 	\multicolumn{5}{c|}{\parbox[t]{9.5cm}{\small\centering\vspace{-4pt}#3\vspace{2pt}} } 
+        \\
+    \cline{3-7}
+     & & \multicolumn{5}{l|}{\small Comments:} \\
+%     & & \multicolumn{5}{l|}{ } \\
+     & & \multicolumn{5}{l|}{ } \\
+	\hline
+}
+
+\newcommand{\AddMCColumn}[2]{\parbox[t]{#1}{#2}\hspace{5pt}}
+            
+            
+\newcommand{\EndTable}[0]{
+	\end{tabular}
+	%\end{table*}
+}
+
+
+
+
+
+\makeatletter
+\renewcommand\@maketitle{%
+\hfill
+\begin{minipage}{0.95\textwidth}
+\centering
+\vskip 2em
+\let\footnote\thanks 
+{\LARGE CIS 4930/6930-002: Data Visualization
+(Spring 2018) \par }
+\vskip 1.5em
+{\Large \@title \par}
+\end{minipage}
+\vskip 1em \par
+}
+\makeatother
+
+
+\newcommand{\myparagraph}[1]{\vspace{5pt}\noindent\begin{tabular}{@{}p{0.3in}@{}p{6.7in}@{}} & #1\end{tabular}}
+
+
+\newcommand{\submission}[1]{
+\myparagraph{All of your work should be done in your git repository in a directory named \textbf{#1}. If you name it anything else, our script will fail (and so will you). Make sure things are labeled well, so that your peers can find them.}
+
+\myparagraph{As you work on the files, and when you're done, make sure you add the files to the repository (i.e.\ \textit{git add}), commit the changes (i.e.\ \textit{git commit}), and push changes to the remote server (i.e.\ \textit{git push}). If you fail to do this, we won't get your files.}}
+
+\newcommand{\feedback}{
+\myparagraph{Your grade will be combination of objective measures (based on the assignment instructions) and subjective grading by the instructor.}
+
+\myparagraph{Peer Review will be used to provide feedback. You will review 3 of your peers' submissions, and 3 of your peers will review your work. This should be taken very seriously as it is the primary form of feedback you'll receive.}
+}
+
+
+\newcommand{\groundrules}{
+\myparagraph{This assignment is intended to be done alone. You may ask others for help with figuring out how details of Processing. However, code must be your own (MOSS will be used!). Furthermore, NO additional libraries (such as giCentre utilities) may be used. Doing so will result in a 0 for those sketches.}
+}
+

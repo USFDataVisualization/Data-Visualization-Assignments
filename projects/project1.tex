@@ -1,0 +1,229 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{my_pkg}
+\usepackage{my_pkg2}
+
+\title{Project 1: Visualizing Data with Tableau \\
+\vspace{5pt}\normalsize (Adapted from an assignment created by James Foley)}
+\SetDocumentFooter{}{}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Objectives}
+
+\myparagraph{This assignment will familiarize you with a full-featured Information Visualization system, Tableau.
+The goals of the assignment are for you to learn the capabilities provided by Tableau, practice with the basic visualization methods that it provides, apply your knowledge of visual design, and assess Tableau's utility in analyzing data.}
+
+\vspace{5pt}
+\section{Ground Rules}
+
+
+\myparagraph{This assignment is intended to be done alone. You may ask others for help with figuring out how to use the program. However, the write-up and its ideas should be developed by you.}
+
+\vspace{5pt}
+\section{Assignment Instructions}
+
+\begin{itemize}
+
+\item Download tableau public at  \url{http://public.tableau.com}.
+
+\item Familiarize yourself with the visualization techniques and the user interfaces via on-line videos  and tutorials at \url{http://www.tableausoftware.com/learn/training}.
+
+\item Create a profile and find the available sample data sets (under Resources$\rightarrow$Sample Data Sets). Browse the data sets and select one to use for the rest of this assignment. 
+\item Once you decide upon a data set, develop three interesting questions about the data set---in other words, put yourself in the shoes of a data analyst, and think about all the different kinds of analysis tasks a person might perform on your chosen data set. 
+\item Develop data abstraction and visual encodings to answer your questions. DON'T make all of your questions be simple! Think deeply about what may be interesting in the data.
+\item Create a write-up describing the final three visualizations, including the questions you were trying to answer and visual encodings you selected. Your write-up should be 1-2 pages, including pictures. Please use a 12-point font with 1 inch margins, 1.5 line spacing. It should be of a professional quality! 
+
+\end{itemize}
+
+\section{Submission}
+
+\myparagraph{We will be using a git repository for submissions throughout the semester. A script will automatically scrape your solution at the deadline. \textbf{Please follow these instructions carefully, particularly in the naming of your repository and the project directory.} If done incorrectly, we won't get your submission, and you'll get a 0.}
+
+\myparagraph{If you've never used git before or just aren't that comfortable with it, try a video tutorial, such as \url{https://www.youtube.com/watch?v=HVsySz-h9r4}.}
+
+
+\begin{itemize}
+\item \textbf{Create Account:} Visit Bitbucket and setup your account  --- \url{https://bitbucket.org}. Please use your \textit{@mail.usf.edu} for your free academic account.
+
+\item \textbf{Setup Repository:} From your dashboard, create a new repository ($+$ sign on the left, then repository).
+ Name the repository ``datavis\_$<$your NetID$>$''.
+
+\item \textbf{Set Permissions:}  From your repository go to Settings$\rightarrow$User and Group Access. \\
+Add \textit{ghulamjilani@mail.usf.edu} and \textit{prosen@usf.edu} with Read access to your repository.
+
+\item \textbf{Install git} on your local machine. 
+\begin{itemize}
+\item For Windows, I recommend TortoiseGit (\url{https://tortoisegit.org/}). 
+\item For Mac, install xcode (\url{https://developer.apple.com/xcode/}) and then the command-line tools (\url{http://railsapps.github.io/xcode-command-line-tools.html}). 
+\item For Linux, git should already be installed. If not, use the appropriate package manager (e.g.\ apt or yum) to install it.
+\end{itemize}
+
+\item \textbf{Clone the repository} locally (i.e.\ \textit{git clone $<$url to repository$>$}).
+
+\item \textbf{Create the project directory:} Create a directory named \textbf{project1} and place all of your files in it. If you name it anything else, our script will fail (and so will you).
+
+\item \textbf{Submission:} As you work on the files, and when you're done, make sure you add the files to the repository (i.e.\ \textit{git add}), commit the changes (i.e.\ \textit{git commit}), and push changes to the remote server (i.e.\ \textit{git push}). If you fail to do this, we won't get your files. 
+
+\item \textbf{Verify:} You can verify that your files have been properly uploaded by checking the Source page on the bitbucket website.
+
+\end{itemize}
+
+
+\section{Grading and Feedback}
+
+\begin{itemize}
+
+\item Your grade will be combination of objective measures (based on the assignment instructions) and subjective grading by the instructor.
+
+\item Peer Review will be used to provide feedback. You will review 3 of your peers' submissions, and 3 of your peers will review your work. This should be taken very seriously as it is the only form of detailed feedback you'll receive.
+
+\end{itemize}
+
+
+
+
+
+
+\newpage
+
+\begin{center}
+{\huge Project 1 Peer Review}
+\end{center}
+
+
+
+\StartTable{Visualization Narrative}
+
+\AddElement{Choice of Visualization}
+	{Was a good choice of visualization used that provides accurate and informative?}
+	{\choice No Description}
+	{$\square$~Incomplete /\\$\square$~Self-Explanatory}
+	{\choice Complete Description}
+
+\AddElement{Support of Narrative}
+	{Does the visualization support the message of the narrative?}
+	{\choice No Description}
+	{$\square$~Incomplete / $\square$~Self-Explanatory}
+	{\choice Completely Supportive}
+        
+\AddElement{Dataset Used}
+	{Do the dataset(s) provide enough information and detail to support 
+    	the narrative?}
+	{\choice Not At All}
+	{\choice Partially}
+	{\choice Completely}
+
+\EndTable  
+
+
+\vspace{15pt}
+\StartTable{Design Considerations}
+
+\AddElement{Clear, Detailed, and Thorough Labeling}
+   	{Is appropriate and complete labeling used throughout or do 
+      	missing labels require assumptions about the data?}
+    {\choice No labels}
+    {\choice Some Missing labels}
+    {\choice Completely labeled} 
+        
+\AddElement{Missing Scales}
+   	{Are scales provided for the data?}
+	{\choice No Scales}
+	{\choice Some Missing Scales}
+	{\choice All Scales Present} 
+
+\AddElement{Missing Legend}
+	{Is a legend provided for the data? Does the legend provide useful 
+    	information?}
+	{\choice No Legend}
+	{\choice Incomplete Legend}
+	{\choice Complete Legend} 
+        
+        
+\AddElement{Scale Distortion}
+	{Is any scale distortion or deception used in the visualization?}	
+	{\choice Severe Distortion}
+	{\choice Minor Distortion}
+	{\choice No Distortion} 
+
+\AddElement{Lie Factor}
+	{Is there any lie factor? How extreme is the lie factor?}
+	{\choice Major Lie}
+	{\choice Minor Lie}
+	{\choice No Lie} 
+
+\AddElement{Data/Ink Ratio}
+	{Is the data to ink ratio reasonable? Could it be more efficient?}
+	{Way Too $\square$~Little / $\square$~Much Ink}
+	{Slightly Too $\square$~Little / $\square$~Much Ink}
+	{\choice Perfect Amount of Ink} 
+        
+\EndTable  
+        
+
+\StartTable{Design Considerations (cont.)}
+
+        
+\AddElement{Chart Junk, Embellishments, Aesthetics}
+	{Are appropriate embellishments used? Are the embellishments 
+    	distracting? Do the embellishments add to the visualization?}
+	{Way Too $\square$~Few / $\square$~Many Embellishments}
+	{A Bit Too $\square$~Few / $\square$~Many Embellishments}
+	{\choice Perfect Number of Embellishments} 
+        
+\AddElement{Data Density}
+	{Has too much data been included in the visualization making 
+    	interpretation difficult? } 
+	{\choice Too Sparse}
+	{\choice Expected}
+	{\choice Too Dense} 
+        
+\AddElement{Task Selection}
+	{Does the visualization enable appropriate visual analysis tasks for 
+    	the data type and/or dataset?}
+	{\choice Unclear Task Selection} 
+    {\choice Some Tasks Missing} 
+    {\choice Wide Range of Task Support}
+        
+\EndTable  
+        
+
+
+
+
+\newpage
+
+
+\begin{center}
+{\huge Project 1 Grading}
+\end{center}
+
+\begin{itemize}
+\item 3 Questions  - 3 point
+\item 3 Visualization - 3 points
+\item Writeup
+\begin{itemize}
+	\item Description - 2 points
+		\begin{itemize}
+    		\item 1 point for single sentence
+            \item 2 points for paragraphs
+		\end{itemize}
+\item Professionalism - 2 points
+		\begin{itemize}
+    		\item name, title/description, aspect ratio of image: -1/4 point ea.
+   		\end{itemize}
+
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+\end{document}
