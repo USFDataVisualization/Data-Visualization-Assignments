@@ -1,1 +1,6 @@
 .DS_Store
+projects/*.aux
+projects/*.log
+projects/*.out
+projects/*.pdf
+projects/*.synctex.gz
