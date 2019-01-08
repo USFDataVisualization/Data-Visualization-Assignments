@@ -19,7 +19,6 @@
 
 \groundrules
 
-
 \section{Assignment Instructions}
 
 \begin{itemize}
@@ -32,6 +31,7 @@
 
 \item With the given data file, draw a BAR CHART for the data (you get to pick which variables to use).
 
+
 \begin{center}
 \includegraphics[width=4cm, height=3cm]{../images/barchart.png}
 \end{center}
@@ -43,18 +43,20 @@
 \includegraphics[width=4cm]{../images/linechart.png}
 \end{center}
 
-\item Create a 3rd sketch (same resolution and dialog box), and draw a LINE CHART on top of a BAR CHART with the data.
 
-\begin{center}
-\includegraphics[width=4cm]{../images/bar_and_line_chart.png}
-\end{center}
+%\item Create a 3rd sketch (same resolution and dialog box), and draw a LINE CHART on top of a BAR CHART with the data.
+
+%\begin{center}
+%\includegraphics[width=4cm]{../images/bar_and_line_chart.png}
+%\end{center}
+
 
 
 \item Modify your sketches such that they use additional visual channels to encode additional variables. Consider using color, size, shape, depth, etc. Your selection and their implementation will have an impact on your grade.
 
 \item Add embellishments of your choice. These can include but are not limited to: axis lines, labels, and tick marks. Consider the margins for your embellishments (try to pick good values for the tick marks and a good number of them---not too many and not too few). Your selection and their implementation will have an impact on your grade.
 
-\item Make your visualizations robust by designing them to support any data (number of elements or value range) and by designing them to support any size or aspect ratio of canvas.
+\item Make your visualizations robust by designing them to support any data (number of elements or value range) and by designing them to support any size or aspect ratio of canvas. You will reuse this code in future assignments, so functionalities will be particularly important.
 
 \end{itemize}
 
@@ -63,51 +65,42 @@
 
 
 
-\myparagraph{We will be using a git repository for submissions throughout the semester. A script will automatically scrape your solution at the deadline. \textbf{Please follow these instructions carefully, particularly in the naming of your repository and the project directory.} If done incorrectly, we won't get your submission, and you'll get a 0.}
-
-\myparagraph{If you've never used git before or just aren't that comfortable with it, try a video tutorial, such as \url{https://www.youtube.com/watch?v=HVsySz-h9r4}.}
+\myparagraph{We will be using a git repository for submissions throughout the semester. A script will automatically scrape your solution at the deadline. \textbf{Please follow these instructions carefully.} If done incorrectly, we won't get your submission, and you will get a 0.}
 
 
 \begin{itemize}
-\item \textbf{Create Account:} Visit Bitbucket and setup your account  --- \url{https://bitbucket.org}. Please use your \textit{@mail.usf.edu} for your free academic account.
-
-\item \textbf{Setup Repository:} From your dashboard, create a new repository ($+$ sign on the left, then repository).
- Name the repository ``datavis\_$<$your NetID$>$''.
-
-\item \textbf{Set Permissions:}  From your repository go to Settings$\rightarrow$User and Group Access. \\
-Add \textit{ghulamjilani@mail.usf.edu} and \textit{prosen@usf.edu} with Read access to your repository.
-
 \item \textbf{Install git} on your local machine. 
 \begin{itemize}
-\item For Windows, I recommend TortoiseGit (\url{https://tortoisegit.org/}). 
+\item For Windows, I recommend TortoiseGit (\url{https://tortoisegit.org/}). You will also need the Git for Windows tools (\url{https://git-scm.com/download/win}).
 \item For Mac, install xcode (\url{https://developer.apple.com/xcode/}) and then the command-line tools (\url{http://railsapps.github.io/xcode-command-line-tools.html}). 
 \item For Linux, git should already be installed. If not, use the appropriate package manager (e.g.\ apt or yum) to install it.
 \end{itemize}
 
-\item \textbf{Clone the repository} locally (i.e.\ \textit{git clone $<$url to repository$>$}).
+\item \textbf{Create Account:} Create a GitHub account, if you don?t already have one (\url{https://github.com/}). A GitHub Education account is optional (\url{https://education.github.com/discount_requests/new}).
 
-\item \textbf{Create the project directory:} Create a directory named \textbf{project1} and place all of your files in it. If you name it anything else, our script will fail (and so will you).
+\item \textbf{Setup Repository:} Visit <\url{https://classroom.github.com/a/0JcYQJsF}> to setup your repository with the skeleton code already added. It is important that you use this url. It attached your repository to our class.
 
-\item \textbf{Submission:} As you work on the files, and when you're done, make sure you add the files to the repository (i.e.\ \textit{git add}), commit the changes (i.e.\ \textit{git commit}), and push changes to the remote server (i.e.\ \textit{git push}). If you fail to do this, we won't get your files. 
 
-\item \textbf{Verify:} You can verify that your files have been properly uploaded by checking the Source page on the bitbucket website.
+\item \textbf{Clone the repository:} Once the repository is created (this can take a few minutes) determine the remote path and pick a local directory for code. Clone the project locally (i.e.\ \textit{git clone $<$url\_to\_repository$>$ $<$path\_to\_local\_directory$>$}).
+
+\item \textbf{Edit your code:} Use existing \textbf{project2} directory for storing/editing your code. If you put it anywhere else, our scripts will fail (and so will you). As you work, make sure you add the files to the repository (i.e.\ \textit{git add}), commit the changes (i.e.\ \textit{git commit}), and push changes to the remote server (i.e.\ \textit{git push}). \underline{Be sure to frequently commit and push your work!}
+
+\item \textbf{Submission:} We will pull from the last commit before the deadline. Make sure to push your code one last time before you're done. If you fail to do this, we won't get your files.  
+
+\item \textbf{Verify:} You can verify that your files have been properly uploaded by checking the Code page on the GitHub website.
 
 \end{itemize}
 
 
-
-
-\submission{project2}
-
 \section{Grading and Feedback}
 
 \feedback
+\begin{itemize}
+\item{Your grade will be combination of objective measures (based on the assignment instructions) and subjective grading by the instructor.}
 
+\item{Breakdown}
 
-\begin{center}
-{\huge Project 2 Grading}
-\end{center}
-
+\vspace{-5pt}
 \begin{itemize}
 	\item 3 Visualizations - 6 points (basic implementation 2 points each)
 	\item Additional Visual Channels - 1.5 points 
@@ -126,8 +119,14 @@ Add \textit{ghulamjilani@mail.usf.edu} and \textit{prosen@usf.edu} with Read acc
 		\begin{itemize}
             \item 0.5 no comments, no classes, "hard coded" values
             \item 0.75 minimally commented, few "hard coded" values
-            \item 1.0 commented, used classes, few "hard coded" values
+            \item 1.0 commented, properly used classes, few "hard coded" values
 		\end{itemize}
+\end{itemize}
+
+
+\item{Peer Review will be used to provide feedback. You will review 3 of your peers' submissions, and 3 of your peers will review your work. This should be taken very seriously as it is the primary form of feedback you'll receive.}
+
+
 \end{itemize}
 
 

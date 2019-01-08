@@ -24,26 +24,27 @@
 
 \begin{itemize}
 
-\item Download the data set at \url{
-http://www.calvin.edu/~stob/data/srsatact.csv}. This dataset contains standardized scores for all Calvin College 2004 seniors that have taken both the ACT and the SAT, together with their GPAs. There are 271 data points and 4 dimensions. 
+\item Use the provided \textit{srsatact.csv} dataset, which contains standardized scores for all Calvin College 2004 seniors that have taken both the ACT and the SAT, together with their GPAs. There are 271 data points and 4 dimensions. 
 
 \item Create a sketch with 800x600 resolution that opens a file dialog box (\url{http://processing.org/reference/selectInput_.html}) and loads a selected data file. 
 
-\item Create a SCATTERPLOT of SAT's mathematics scores (SATM column) versus SAT's verbal scores (SATV column). In other words, the x-coordinate of the plot should encode the SATM variable, and the y-coordinate should encode SATV. 
-
-\begin{center}
+\begin{minipage}{0.71\textwidth}
+\item 
+Create a SCATTERPLOT of SAT's mathematics scores (SATM column) versus SAT's verbal scores (SATV column). In other words, the x-coordinate of the plot should encode the SATM variable, and the y-coordinate should encode SATV. \textit{Hint}: You should consider using the $map()$ function for easier display of the scatterplot (and the scatterplot matrix).
+\end{minipage}\hspace{8pt}
+\begin{minipage}{0.19\textwidth}
 \fbox{\includegraphics[width=3.5cm]{../images/scatterplot.png}}
-\end{center}
+\end{minipage}
 
-\item Create a 2nd sketch with ACT scores (ACT column) on the x-axis and GPA scores (GPA column) on the y-axes.
+\item Add the functionality to switch views (using the keyboard) to a scatterplot with ACT scores (ACT column) on the x-axis and GPA scores (GPA column) on the y-axes.
 
-\item Now, create a 3rd sketch with a SCATTERPLOT MATRIX that shows all combinations of variables.
+\item Create a 2nd sketch with a SCATTERPLOT MATRIX (SPLOM) that shows all combinations of variables. \textit{Hint}: a SPLOM is just a grid of scatterplots. Reuse your scatterplot code from the first sketch.
 
 \begin{center}
 \includegraphics[width=3.5cm]{../images/splom.png}
 \end{center}
 
-\item In addition, download (at least) one of the other datasets provided on Canvas, and make sure it works with your sketches.
+\item \textbf{Grad Req Only:} In addition, test that (at least) ONE (1) of the other datasets provided works with your sketches (and place it in the data directory of your sketches).
 
 \item Modify your sketches such that they use additional visual channels to encode additional variables. Consider using color, size, shape, depth, etc. Your selection and their implementation will have an impact on your grade.
 
@@ -60,17 +61,27 @@ http://www.calvin.edu/~stob/data/srsatact.csv}. This dataset contains standardiz
 
 \section{Grading and Feedback}
 
-\feedback
-
-\section{Hints}
-\myparagraph{You should consider using the $map()$ function for easier display of the scatterplot or scatterplot matrix. Use the $map()$ function to take a number and its range and remap that number to a new range.}
-
-\myparagraph{Refer Processing.org for more details and following links:}
-
-\myparagraph{\hspace{10pt}\url{https://processing.org/reference/map\_.html}}
-
-\myparagraph{\hspace{10pt}\url{https://processing.org/examples/map.html}}
-
+\feedback{
+\begin{itemize}
+	\item 2 Visualization - 7 points
+		\begin{itemize}
+    		\item scatterplot - 3 points
+            \item scatterplot matrix - 4 points
+		\end{itemize}
+	\item Embellishment \& additional Visual Channels - 1.5 points 
+		\begin{itemize}
+    		\item 0.5 points for none used
+    		\item 1.0 point for a few
+            \item 1.5 points for many
+		\end{itemize}
+	\item Code Professionalism - 1.5 points
+		\begin{itemize}
+            \item 0.75 no comments, no classes, "hard coded" values
+            \item 1.0 minimally commented, few "hard coded" values
+            \item 1.5 commented, properly used classes, few "hard coded" values
+		\end{itemize}
+\end{itemize}
+}
 
 
 
@@ -196,33 +207,6 @@ http://www.calvin.edu/~stob/data/srsatact.csv}. This dataset contains standardiz
 \EndTable  
         
 
-
-\newpage
-
-
-\begin{center}
-{\huge Project 3 Grading}
-\end{center}
-
-\begin{itemize}
-	\item 2 Visualization - 7 points
-		\begin{itemize}
-    		\item scatterplot - 3 points
-            \item scatterplot matrix - 4 points
-		\end{itemize}
-	\item Embellishment \& additional Visual Channels - 1.5 points 
-		\begin{itemize}
-    		\item 0.5 points for none used
-    		\item 1.0 point for a few
-            \item 1.5 points for many
-		\end{itemize}
-	\item Code Professionalism - 1.5 points
-		\begin{itemize}
-            \item 0.75 no comments, no classes, "hard coded" values
-            \item 1.0 minimally commented, few "hard coded" values
-            \item 1.5 commented, used classes, few "hard coded" values
-		\end{itemize}
-\end{itemize}
 
 
 

@@ -3,7 +3,7 @@
 \usepackage{../my_pkg}
 
 
-\title{Project 8: Force Directed Graph Layout}
+\title{Project 8: Force Directed Graph Layout (Grad Only)}
 \SetDocumentFooter{}{}
 
 \begin{document}
@@ -24,7 +24,7 @@
 
 \begin{itemize}
 
-\item Download the skeleton code and data provided in Canvas$\rightarrow$Files. This dataset contains character coappearence in Victor Hugo's Les Misérables, compiled by Donald Knuth. 
+\item Download the skeleton code and data provided in Canvas$\rightarrow$Files. This dataset contains character coappearence in Victor Hugo's Les Misérables, compiled by Donald Knuth. Node in the graph are characters. Edge in the graph signify characters appearing in the same chapter of the novel.
 
 \item Fill in the portion of the code for loading the data, noting that it is in JSON format. JSON is a more flexible storage format than CSV, but it is also more complicated to parse and load. Please see Processing reference on parsing JSON Objects\footnote{\url{https://processing.org/reference/parseJSONObject_.html}} and JSON Arrays\footnote{\url{https://processing.org/reference/parseJSONArray_.html}}.
 
@@ -49,7 +49,24 @@
 
 \section{Grading and Feedback}
 
-\feedback
+\feedbackNoPR{
+\begin{itemize}
+	\item Force directed layout - 7 points
+	\item MDS layout - 5 points
+	\item Additional interaction, embellishment, and additional Visual Channels - 1.5 points 
+		\begin{itemize}
+    		\item 0.5 points for none used
+    		\item 1.0 point for a few
+            \item 1.5 points for many
+		\end{itemize}
+	\item Code Professionalism - 1.5 points
+		\begin{itemize}
+            \item 0.5 no comments, no classes, "hard coded" values
+            \item 1.0 minimally commented, few "hard coded" values
+            \item 1.5 commented, properly used classes, few "hard coded" values
+		\end{itemize}
+\end{itemize}
+}
 
 
 
@@ -202,32 +219,6 @@
         
 \EndTable  
  
-
-
-
-\newpage
-
-
-\begin{center}
-{\huge Project 8 Grading}
-\end{center}
-
-\begin{itemize}
-	\item Force directed layout - 7 points
-	\item MDS layout - 5 points
-	\item Additional interaction, embellishment, and additional Visual Channels - 1.5 points 
-		\begin{itemize}
-    		\item 0.5 points for none used
-    		\item 1.0 point for a few
-            \item 1.5 points for many
-		\end{itemize}
-	\item Code Professionalism - 1.5 points
-		\begin{itemize}
-            \item 0.5 no comments, no classes, "hard coded" values
-            \item 1.0 minimally commented, few "hard coded" values
-            \item 1.5 commented, used classes, few "hard coded" values
-		\end{itemize}
-\end{itemize}
 
 
 

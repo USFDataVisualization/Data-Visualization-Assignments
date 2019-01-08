@@ -230,15 +230,28 @@
 
 
 \newcommand{\submission}[1]{
-\myparagraph{All of your work should be done in your git repository in a directory named \textbf{#1}. If you name it anything else, our script will fail (and so will you). Make sure things are labeled well, so that your peers can find them.}
+\myparagraph{All of your work should be done in your git repository in the directory named \textbf{#1}. If put it anywhere else, our script will fail (and so will you). Make sure things are labeled well, so that your peers can find them.}
 
-\myparagraph{As you work on the files, and when you're done, make sure you add the files to the repository (i.e.\ \textit{git add}), commit the changes (i.e.\ \textit{git commit}), and push changes to the remote server (i.e.\ \textit{git push}). If you fail to do this, we won't get your files.}}
+\myparagraph{As you work on the files make sure you frequently add the files to the repository (i.e.\ \textit{git add}), commit the changes (i.e.\ \textit{git commit}), and push changes to the remote server (i.e.\ \textit{git push}). If you fail to do this, we won't get your files.}}
 
-\newcommand{\feedback}{
-\myparagraph{Your grade will be combination of objective measures (based on the assignment instructions) and subjective grading by the instructor.}
-
-\myparagraph{Peer Review will be used to provide feedback. You will review 3 of your peers' submissions, and 3 of your peers will review your work. This should be taken very seriously as it is the primary form of feedback you'll receive.}
+\newcommand{\feedback}[1]{
+\begin{itemize}
+\item{Your grade will be combination of objective measures (based on the assignment instructions) and subjective grading by the instructor.}
+\item{Breakdown
+\vspace{-5pt}#1}
+\item{Peer Review will be used to provide feedback. You will review 3 of your peers' submissions, and 3 of your peers will review your work. This should be taken very seriously as it is the primary form of feedback you'll receive.}
+\end{itemize}
 }
+
+
+\newcommand{\feedbackNoPR}[1]{
+\begin{itemize}
+\item{Your grade will be combination of objective measures (based on the assignment instructions) and subjective grading by the instructor.}
+\item{Breakdown
+\vspace{-5pt}#1}
+\end{itemize}
+}
+
 
 
 \newcommand{\groundrules}{
